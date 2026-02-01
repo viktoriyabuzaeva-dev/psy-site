@@ -129,21 +129,6 @@ export default function Process() {
           ))}
         </motion.div>
 
-        {/* Quote */}
-        <motion.blockquote
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 text-center max-w-3xl mx-auto"
-        >
-          <p className="text-2xl md:text-3xl font-serif text-text-secondary italic leading-relaxed">
-            «Задача терапии — сделать бессознательное сознательным 
-            и тем самым вернуть человеку власть над собственной жизнью»
-          </p>
-          <cite className="block mt-4 text-accent text-sm not-italic">
-            — Зигмунд Фрейд
-          </cite>
-        </motion.blockquote>
       </div>
     </section>
   )
