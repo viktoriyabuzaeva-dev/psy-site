@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-text-primary;
+  }
+  
+  ::selection {
+    @apply bg-accent text-white;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brown rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-brown-light;
+  }
+}
+
+@layer components {
+  .section {
+    @apply min-h-screen py-20 px-6 md:px-12 lg:px-20;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-serif font-medium mb-8;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl text-text-secondary mb-12 max-w-2xl;
+  }
+  
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-lg 
+           font-medium transition-all duration-300 inline-flex items-center gap-2;
+  }
+  
+  .btn-secondary {
+    @apply border border-text-secondary/30 hover:border-accent text-text-primary 
+           px-8 py-4 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-background-light border border-white/5 rounded-2xl p-6 md:p-8
+           transition-all duration-300 hover:border-accent/30;
+  }
+  
+  .input-field {
+    @apply w-full bg-background border border-white/10 rounded-lg px-4 py-3
+           text-text-primary placeholder:text-text-muted
+           focus:outline-none focus:border-accent transition-colors;
+  }
+  
+  .nav-link {
+    @apply text-text-secondary hover:text-text-primary transition-colors duration-300
+           relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px
+           after:bg-accent after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+  
+  .nav-link-active {
+    @apply text-text-primary after:w-full;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-brown bg-clip-text text-transparent;
+    padding-bottom: 0.1em;
+    margin-bottom: -0.1em;
+  }
+  
+  .border-gradient {
+    border-image: linear-gradient(to right, theme('colors.accent'), theme('colors.brown')) 1;
+  }
+}
