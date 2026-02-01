@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // Ensure clean build
+  distDir: '.next',
+  trailingSlash: false,
 }
 
 module.exports = nextConfig
