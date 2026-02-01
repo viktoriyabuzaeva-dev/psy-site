@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
@@ -20,7 +19,6 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
   const isHomePage = pathname === '/'
-  const isBlogPage = pathname?.startsWith('/blog')
 
   useEffect(() => {
     if (!isHomePage) return
@@ -89,25 +87,6 @@ export default function Navigation() {
               </span>
             </motion.button>
           ))}
-        
-          {/* Blog Link */}
-          <Link
-            href="/blog"
-            className="group relative flex items-center justify-center w-10 h-10 mt-4 pt-4 border-t border-white/10"
-          >
-            <span 
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                isBlogPage 
-                  ? 'bg-accent w-3 h-3' 
-                  : 'bg-text-secondary/50 group-hover:bg-text-primary'
-              }`}
-            />
-            
-            {/* Tooltip */}
-            <span className="absolute left-full ml-4 px-3 py-1.5 bg-background-light rounded-lg text-sm text-text-primary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none border border-white/10">
-              Блог
-            </span>
-          </Link>
         </div>
         
         {/* Vertical line indicator */}
@@ -169,26 +148,6 @@ export default function Navigation() {
                     {item.label}
                   </motion.button>
                 ))}
-                
-                {/* Blog Link */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: navItems.length * 0.05 }}
-                  className="pt-4 mt-2 border-t border-white/10"
-                >
-                  <Link
-                    href="/blog"
-                    onClick={() => setIsOpen(false)}
-                    className={`block py-2 text-lg transition-colors ${
-                      isBlogPage 
-                        ? 'text-accent' 
-                        : 'text-text-secondary hover:text-text-primary'
-                    }`}
-                  >
-                    Блог
-                  </Link>
-                </motion.div>
               </div>
             </motion.div>
           )}

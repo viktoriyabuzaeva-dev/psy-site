@@ -2,6 +2,9 @@
   command = "npm run build"
   publish = "out"
 
+[build.environment]
+  NEXT_PUBLIC_SITE_URL = "https://buzaevapsy-site.netlify.app"
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -10,7 +13,22 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[headers]]
-  for = "/_next/static/*"
+  for = "/_next/static/**"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
