@@ -33,6 +33,10 @@ yarn-error.log*
 # Netlify
 .netlify
 
+# Cursor AI Rules (local only)
+.cursor/
+.cursorrules
+
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
