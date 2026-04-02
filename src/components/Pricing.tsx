@@ -8,13 +8,6 @@ export default function Pricing() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  const scrollToBooking = () => {
-    const element = document.getElementById('booking')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <section id="pricing" className="section" ref={ref}>
       <div className="max-w-4xl mx-auto">
@@ -37,8 +30,7 @@ export default function Pricing() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative"
         >
-          {/* Decorative elements */}
-          <div className="absolute -inset-4 bg-gradient-to-br from-accent/10 to-brown/10 rounded-3xl blur-xl" />
+          <div className="absolute -inset-4 bg-gradient-to-br from-accent/10 to-teal/10 rounded-3xl blur-xl" />
           
           <div className="relative bg-background-light border border-white/10 rounded-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -77,19 +69,20 @@ export default function Pricing() {
               </div>
             </div>
 
-            {/* CTA Button */}
-            <div className="mt-8 pt-8 border-t border-white/10 text-center">
-              <motion.button
-                onClick={scrollToBooking}
-                className="btn-primary text-lg px-12"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Записаться на консультацию
-              </motion.button>
-              <p className="text-text-muted text-sm mt-4">
-                Запись и оплата обсуждаются в личном сообщении
-              </p>
+            {/* Planerka booking widget */}
+            <div className="mt-8 pt-8 border-t border-white/10">
+              <p className="text-center text-text-muted text-sm mb-6">Выберите время, оплатите — ссылка на Zoom придёт автоматически</p>
+              <div
+                className="app-planerka-embed"
+                data-planerka-embed="default"
+                data-planerka-url="https://planerka.app/meet"
+                data-planerka-user="viktoriya-buzaeva-lp7m21"
+                data-planerka-event="konsultaciya-u-buzaevoy-viktorii"
+                data-planerka-bg="#0D3422"
+                data-planerka-border="#0D3422"
+                data-planerka-shadow-color="#1A5C38"
+                style={{ width: '100%', minHeight: '600px' }}
+              />
             </div>
           </div>
         </motion.div>
@@ -122,7 +115,7 @@ export default function Pricing() {
               Как записаться
             </h3>
             <p className="text-text-secondary text-sm">
-              Напишите в Telegram, ответьте на несколько вопросов — и я подберу удобное время для встречи.
+              Выберите время в виджете, оплатите онлайн — ссылка на Zoom создаётся автоматически, без ожидания.
             </p>
           </div>
         </motion.div>

@@ -12,12 +12,12 @@
   }
   
   ::selection {
-    @apply bg-accent text-white;
+    @apply bg-accent text-background;
   }
   
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   
   ::-webkit-scrollbar-track {
@@ -25,11 +25,11 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-brown rounded-full;
+    @apply bg-teal rounded-full;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-brown-light;
+    @apply bg-teal-light;
   }
 }
 
@@ -47,8 +47,8 @@
   }
   
   .btn-primary {
-    @apply bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-lg 
-           font-medium transition-all duration-300 inline-flex items-center gap-2;
+    @apply bg-accent hover:bg-accent-hover text-background px-8 py-4 rounded-lg 
+           font-semibold transition-all duration-300 inline-flex items-center gap-2;
   }
   
   .btn-secondary {
@@ -57,8 +57,8 @@
   }
   
   .card {
-    @apply bg-background-light border border-white/5 rounded-2xl p-6 md:p-8
-           transition-all duration-300 hover:border-accent/30;
+    @apply bg-background-light border border-accent/10 rounded-2xl p-6 md:p-8
+           transition-all duration-300 hover:border-accent/40;
   }
   
   .input-field {
@@ -81,12 +81,12 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-accent to-brown bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent to-teal-light bg-clip-text text-transparent;
     padding-bottom: 0.1em;
     margin-bottom: -0.1em;
   }
   
   .border-gradient {
-    border-image: linear-gradient(to right, theme('colors.accent'), theme('colors.brown')) 1;
+    border-image: linear-gradient(to right, theme('colors.accent'), theme('colors.teal')) 1;
   }
 }

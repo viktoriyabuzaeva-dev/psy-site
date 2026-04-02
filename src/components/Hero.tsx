@@ -4,21 +4,18 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 export default function Hero() {
-  const scrollToBooking = () => {
-    const element = document.getElementById('booking')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+  const scrollToPricing = () => {
+    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <section id="hero" className="min-h-screen flex items-center relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-brown/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-teal/20" />
       
       {/* Decorative elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-brown/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-20 w-72 h-72 bg-teal/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-background-light/30 rounded-full blur-3xl" />
       
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -28,32 +25,22 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <motion.p 
-              className="text-accent uppercase tracking-widest text-sm mb-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.1 }}
-            >
-              Психолог онлайн
-            </motion.p>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-medium leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-light leading-tight mb-6">
               Виктория
-              <span className="block text-gradient">Бузаева</span>
+              <span className="block italic text-gradient">Бузаева</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-text-secondary mb-4 font-light">
-              Личностно-ориентированная<br />реконструктивная психотерапия
+            <p className="text-2xl md:text-3xl text-text-primary mb-4 font-serif font-light italic">
+              Работаю с тем, о чём не принято говорить вслух
             </p>
-            
-            <p className="text-text-secondary/80 mb-8 max-w-lg leading-relaxed">
-              Помогаю разобраться в себе и отношениях с другими. 
-              Работаю с теми, кто готов к глубоким и устойчивым изменениям.
+
+            <p className="text-lg text-text-secondary mb-8 max-w-lg leading-relaxed font-sans font-light">
+              Психолог для женщин
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.button
-                onClick={scrollToBooking}
+                onClick={scrollToPricing}
                 className="btn-primary"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -75,14 +62,14 @@ export default function Hero() {
             </div>
             
             {/* Stats */}
-            <div className="mt-12 pt-8 border-t border-white/10 flex gap-8">
+            <div className="mt-12 pt-8 border-t border-accent/20 flex gap-8">
               <div>
-                <p className="text-3xl font-serif text-accent">100+</p>
-                <p className="text-text-muted text-sm">часов личной терапии</p>
+                <p className="text-3xl font-serif italic text-accent">100+</p>
+                <p className="text-text-muted text-sm font-sans">часов личной терапии</p>
               </div>
               <div>
-                <p className="text-3xl font-serif text-accent">регулярные</p>
-                <p className="text-text-muted text-sm">супервизии</p>
+                <p className="text-3xl font-serif italic text-accent">регулярные</p>
+                <p className="text-text-muted text-sm font-sans">супервизии</p>
               </div>
             </div>
           </motion.div>
@@ -96,8 +83,8 @@ export default function Hero() {
           >
             <div className="relative aspect-[3/4] max-w-md mx-auto lg:max-w-none">
               {/* Photo frame with gradient border */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-brown/20 rounded-2xl transform rotate-3" />
-              <div className="absolute inset-0 bg-gradient-to-br from-brown/20 to-accent/20 rounded-2xl transform -rotate-3" />
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-teal/20 rounded-2xl transform rotate-3" />
+              <div className="absolute inset-0 bg-gradient-to-br from-teal/20 to-accent/20 rounded-2xl transform -rotate-3" />
               
               {/* Photo */}
               <div className="relative bg-background-light rounded-2xl overflow-hidden h-full border border-white/10">
@@ -113,7 +100,7 @@ export default function Hero() {
               
               {/* Decorative accent */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-accent/30 rounded-full" />
-              <div className="absolute -top-4 -left-4 w-16 h-16 border border-brown/30 rounded-full" />
+              <div className="absolute -top-4 -left-4 w-16 h-16 border border-teal/40 rounded-full" />
             </div>
           </motion.div>
         </div>

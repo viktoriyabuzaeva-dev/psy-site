@@ -22,10 +22,14 @@ export default function About() {
           variants={fadeInUp}
           transition={{ duration: 0.3 }}
         >
-          <p className="text-accent uppercase tracking-widest text-sm mb-4">[ обо мне ]</p>
-          <h2 className="section-title">
-            Меня зовут Виктория
+          <p className="text-accent uppercase tracking-widest text-sm mb-4 font-sans">[ обо мне ]</p>
+          <h2 className="section-title font-serif font-light">
+            Меня зовут <span className="italic">Виктория</span>
           </h2>
+          <p className="text-text-secondary max-w-2xl mb-8 leading-relaxed font-sans font-light">
+            Психолог в психодинамическом подходе. Работаю с женщинами — с утекающей энергией, желаниями, сексуальностью.
+            С тем, что часто первым ставят в рамки.
+          </p>
         </motion.div>
 
         {/* Education card - full width */}
@@ -103,7 +107,7 @@ export default function About() {
                 </div>
                 <h4 className="font-medium text-text-primary">Ваш темп</h4>
               </div>
-              <p className="text-text-muted text-sm pl-[52px]">Двигаемся со скоростью, комфортной для вас</p>
+              <p className="text-text-muted text-sm pl-[52px]">Не тороплю и не тяну. Глубина — не синоним скорости</p>
             </div>
             <div className="p-5 rounded-2xl border border-accent/20 bg-accent/5">
               <div className="flex items-center gap-3 mb-2">
@@ -138,19 +142,19 @@ export default function About() {
                 <li className="flex items-start gap-3">
                   <span className="text-accent text-lg leading-6">→</span>
                   <span className="text-text-secondary">
-                    Делаем видимым невидимое: исследуем мотивы и внутренние конфликты
+                    Исследуем не симптом, а то откуда он растёт — мотивы и внутренние конфликты
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-accent text-lg leading-6">→</span>
                   <span className="text-text-secondary">
-                    Цель — устойчивые изменения, а не временное подавление проявлений
+                    Цель — понять механизм, а не заглушить
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-accent text-lg leading-6">→</span>
                   <span className="text-text-secondary">
-                    На старте согласуем цели и ритм встреч
+                    В начале договариваемся о целях и темпе — у нас обеих должна быть ясность
                   </span>
                 </li>
               </ul>

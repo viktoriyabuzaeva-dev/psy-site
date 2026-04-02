@@ -3,7 +3,6 @@ import About from '@/components/About'
 import Services from '@/components/Services'
 import Process from '@/components/Process'
 import Pricing from '@/components/Pricing'
-import Booking from '@/components/Booking'
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Services />
       <Process />
       <Pricing />
-      <Booking />
       
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-white/5">
@@ -35,7 +33,7 @@ export default function Home() {
                 <li><a href="#services" className="text-text-muted hover:text-text-primary transition-colors">С чем работаю</a></li>
                 <li><a href="#process" className="text-text-muted hover:text-text-primary transition-colors">Как проходят консультации</a></li>
                 <li><a href="#pricing" className="text-text-muted hover:text-text-primary transition-colors">Стоимость</a></li>
-                <li><a href="#booking" className="text-text-muted hover:text-text-primary transition-colors">Записаться</a></li>
+                <li><a href="#pricing" className="text-text-muted hover:text-text-primary transition-colors">Записаться</a></li>
               </ul>
             </div>
             

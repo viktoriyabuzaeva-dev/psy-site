@@ -36,7 +36,7 @@ export default function SchemaMarkup() {
     },
     availableChannel: {
       '@type': 'ServiceChannel',
-      serviceUrl: `${baseUrl}/#booking`,
+      serviceUrl: `${baseUrl}/#pricing`,
       serviceType: 'Online',
     },
     offers: {
@@ -103,7 +103,7 @@ export default function SchemaMarkup() {
         name: 'Сколько стоит консультация психолога?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Стоимость одной консультации — 2500 рублей за 60 минут. Оплата производится онлайн при записи.',
+          text: 'Стоимость одной консультации — 2500 рублей за 60 минут. Выбираете время в виджете на сайте, оплачиваете онлайн — ссылка на Zoom приходит автоматически.',
         },
       },
       {

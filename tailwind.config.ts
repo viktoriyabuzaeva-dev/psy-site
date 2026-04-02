@@ -9,21 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#0D0D0D',
-        'background-light': '#1A1A1A',
-        accent: '#8B2635',
-        'accent-hover': '#A62D3F',
-        brown: '#4A3728',
-        'brown-light': '#5D4A3A',
+        background: '#0A1410',
+        'background-light': '#0D3422',
+        accent: '#E8C84A',
+        'accent-hover': '#F2D660',
+        teal: '#013D38',
+        'teal-light': '#1A5C38',
         text: {
-          primary: '#F5F5F5',
-          secondary: '#A0A0A0',
-          muted: '#6B6B6B',
+          primary: '#F5EDD4',
+          secondary: '#C4B89A',
+          muted: '#7A9A82',
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+        sans: ['var(--font-raleway)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-cormorant)', 'Georgia', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',

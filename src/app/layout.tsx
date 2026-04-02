@@ -1,27 +1,31 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Raleway, Cormorant_Garamond } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
-const inter = Inter({ 
+const raleway = Raleway({ 
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-inter',
+  variable: '--font-raleway',
   display: 'swap',
   preload: true,
+  weight: ['300', '400', '500', '600'],
 })
 
-const playfair = Playfair_Display({ 
+const cormorant = Cormorant_Garamond({ 
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-playfair',
+  variable: '--font-cormorant',
   display: 'swap',
   preload: true,
+  weight: ['300', '400', '600', '700'],
+  style: ['normal', 'italic'],
 })
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0D0D0D',
+  themeColor: '#0A1410',
 }
 
 export const metadata: Metadata = {
@@ -36,16 +40,18 @@ export const metadata: Metadata = {
     ],
     apple: '/favicon.svg',
   },
-  description: 'Психолог онлайн Виктория Бузаева. Личностно-ориентированная реконструктивная психотерапия (ЛОРП). Работаю с самооценкой, отношениями, тревогой. Консультации в Zoom. Запись онлайн.',
+  description: 'Психолог онлайн Виктория Бузаева. Работаю с женщинами по темам тела, близости и сексуальности. Психодинамический подход. Консультации в Zoom.',
   keywords: [
     'психолог онлайн',
-    'онлайн консультация психолога',
+    'психолог для женщин',
+    'психолог сексуальность',
+    'нет желания психолог',
+    'психолог близость отношения',
     'личностно-ориентированная психотерапия',
-    'психолог самооценка',
-    'психолог отношения',
-    'помощь психолога при тревоге',
-    'психолог Москва онлайн',
-    'ЛОРП терапия',
+    'психолог тело желание',
+    'психолог онлайн женщины',
+    'аноргазмия психолог',
+    'страх близости психолог',
   ],
   authors: [{ name: 'Виктория Бузаева' }],
   creator: 'Виктория Бузаева',
@@ -85,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="ru" className={`${raleway.variable} ${cormorant.variable}`}>
       <head>
         <SchemaMarkup />
       </head>
@@ -94,6 +100,10 @@ export default function RootLayout({
         <main className="ml-0 lg:ml-20">
           {children}
         </main>
+        <Script
+          src="https://planerka.app/meet/assets/external/embed.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )

@@ -8,7 +8,7 @@ const steps = [
   {
     number: '01',
     title: 'Запись и оплата',
-    description: 'Выбираете удобное время, оплачиваете онлайн — и сразу получаете ссылку на Zoom на почту.',
+    description: 'Выбираете удобное время, оплачиваете онлайн и сразу получаете ссылку на Zoom встречу.',
   },
   {
     number: '02',
@@ -71,7 +71,7 @@ export default function Process() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="process" className="section bg-background-light/30" ref={ref}>
+    <section id="process" className="section bg-background-light/30 !min-h-0" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -85,7 +85,7 @@ export default function Process() {
         </motion.div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}

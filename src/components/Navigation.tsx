@@ -9,8 +9,7 @@ const navItems = [
   { id: 'about', label: 'Обо мне', icon: '○' },
   { id: 'services', label: 'С чем работаю', icon: '○' },
   { id: 'process', label: 'Как проходят консультации', icon: '○' },
-  { id: 'pricing', label: 'Стоимость', icon: '○' },
-  { id: 'booking', label: 'Записаться', icon: '○' },
+  { id: 'pricing', label: 'Стоимость и запись', icon: '○' },
 ]
 
 export default function Navigation() {
