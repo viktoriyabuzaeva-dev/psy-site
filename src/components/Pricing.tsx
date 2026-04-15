@@ -44,7 +44,7 @@ export default function Pricing() {
                   <span className="text-text-secondary">₽</span>
                 </div>
                 <p className="text-text-secondary">
-                  60 минут в Zoom
+                  55 минут в Zoom
                 </p>
               </div>
 
