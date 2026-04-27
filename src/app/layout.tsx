@@ -1,25 +1,24 @@
 import type { Metadata, Viewport } from 'next'
-import { Raleway, Cormorant_Garamond } from 'next/font/google'
+import { Inter, Voltaire } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import SchemaMarkup from '@/components/SchemaMarkup'
 
-const raleway = Raleway({ 
+const inter = Inter({ 
   subsets: ['latin', 'cyrillic'],
-  variable: '--font-raleway',
+  variable: '--font-inter',
   display: 'swap',
   preload: true,
-  weight: ['300', '400', '500', '600'],
+  weight: ['300', '400', '500', '600', '700'],
 })
 
-const cormorant = Cormorant_Garamond({ 
-  subsets: ['latin', 'cyrillic'],
-  variable: '--font-cormorant',
+const voltaire = Voltaire({ 
+  subsets: ['latin'],
+  variable: '--font-voltaire',
   display: 'swap',
   preload: true,
-  weight: ['300', '400', '600', '700'],
-  style: ['normal', 'italic'],
+  weight: '400',
 })
 
 export const viewport: Viewport = {
@@ -91,7 +90,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className={`${raleway.variable} ${cormorant.variable}`}>
+    <html lang="ru" className={`${inter.variable} ${voltaire.variable}`}>
       <head>
         <SchemaMarkup />
       </head>
