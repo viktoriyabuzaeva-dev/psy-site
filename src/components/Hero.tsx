@@ -155,7 +155,7 @@ export default function Hero() {
             <div className="mt-8">
               <motion.button
                 onClick={scrollToBooking}
-                className="btn-primary w-full sm:w-auto"
+                className="btn-primary w-full justify-center"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
