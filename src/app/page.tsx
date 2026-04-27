@@ -1,19 +1,17 @@
 import Hero from '@/components/Hero'
 import Booking from '@/components/Booking'
 import About from '@/components/About'
+import Education from '@/components/Education'
 import Services from '@/components/Services'
-import Process from '@/components/Process'
-import Pricing from '@/components/Pricing'
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Booking />
-      <About />
       <Services />
-      <Process />
-      <Pricing />
+      <About />
+      <Education />
       
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-white/5">
@@ -31,11 +29,10 @@ export default function Home() {
             <div>
               <h4 className="font-medium mb-4 text-text-secondary">Навигация</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#about" className="text-text-muted hover:text-text-primary transition-colors">Обо мне</a></li>
+                <li><a href="#booking" className="text-text-muted hover:text-text-primary transition-colors">Записаться</a></li>
                 <li><a href="#services" className="text-text-muted hover:text-text-primary transition-colors">С чем работаю</a></li>
-                <li><a href="#process" className="text-text-muted hover:text-text-primary transition-colors">Как проходят консультации</a></li>
-                <li><a href="#pricing" className="text-text-muted hover:text-text-primary transition-colors">Стоимость</a></li>
-                <li><a href="#pricing" className="text-text-muted hover:text-text-primary transition-colors">Записаться</a></li>
+                <li><a href="#about" className="text-text-muted hover:text-text-primary transition-colors">Как будем работать</a></li>
+                <li><a href="#education" className="text-text-muted hover:text-text-primary transition-colors">Образование</a></li>
               </ul>
             </div>
             

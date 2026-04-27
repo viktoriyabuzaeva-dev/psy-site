@@ -4,12 +4,74 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 export default function Hero() {
-  const scrollToPricing = () => {
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })
+  const scrollToBooking = () => {
+    document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const quickFacts = [
+    {
+      title: 'Онлайн в Zoom',
+      description: 'Удобно из любой точки мира',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: '55 минут',
+      description: 'Длительность одной консультации',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: '1-2 раза в неделю',
+      description: 'Частоту подбираем индивидуально',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+          />
+        </svg>
+      ),
+    },
+    {
+      title: 'Конфиденциально',
+      description: 'Все, что вы расскажете, остается между нами',
+      icon: (
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+          />
+        </svg>
+      ),
+    },
+  ]
+
   return (
-    <section id="hero" className="min-h-screen flex items-center relative overflow-hidden">
+    <section
+      id="hero"
+      className="relative overflow-hidden pt-10 md:pt-12 lg:pt-14 pb-10 md:pb-12"
+    >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-teal/20" />
       
@@ -17,64 +79,9 @@ export default function Hero() {
       <div className="absolute top-20 right-20 w-72 h-72 bg-teal/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-background-light/30 rounded-full blur-3xl" />
       
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-20">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-light leading-tight mb-6">
-              Виктория
-              <span className="block italic text-gradient">Бузаева</span>
-            </h1>
-            
-            <p className="text-2xl md:text-3xl text-text-primary mb-4 font-serif font-light italic">
-              Работаю с тем, о чём не принято говорить вслух
-            </p>
-
-            <p className="text-lg text-text-secondary mb-8 max-w-lg leading-relaxed font-sans font-light">
-              Психолог для женщин
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button
-                onClick={scrollToPricing}
-                className="btn-primary"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Записаться на консультацию
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </motion.button>
-              
-              <motion.a
-                href="#about"
-                className="btn-secondary text-center"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Узнать больше
-              </motion.a>
-            </div>
-            
-            {/* Stats */}
-            <div className="mt-12 pt-8 border-t border-accent/20 flex gap-8">
-              <div>
-                <p className="text-3xl font-serif italic text-accent">100+</p>
-                <p className="text-text-muted text-sm font-sans">часов личной терапии</p>
-              </div>
-              <div>
-                <p className="text-3xl font-serif italic text-accent">регулярные</p>
-                <p className="text-text-muted text-sm font-sans">супервизии</p>
-              </div>
-            </div>
-          </motion.div>
-          
-          {/* Photo */}
+          {/* Photo (left like reference) */}
           <motion.div
             className="relative"
             initial={{ opacity: 0 }}
@@ -90,7 +97,7 @@ export default function Hero() {
               <div className="relative bg-background-light rounded-2xl overflow-hidden h-full border border-white/10">
                 <Image
                   src="/photo.png"
-                  alt="Виктория Бузаева — психолог"
+                  alt="Виктория Бузаева - психолог"
                   fill
                   className="object-cover object-top"
                   priority
@@ -103,19 +110,62 @@ export default function Hero() {
               <div className="absolute -top-4 -left-4 w-16 h-16 border border-teal/40 rounded-full" />
             </div>
           </motion.div>
+
+          {/* Text Content (right like reference) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="max-w-xl"
+          >
+            <p className="text-text-muted uppercase tracking-wider text-sm mb-3">
+              Психолог
+            </p>
+
+            <h1 className="text-4xl md:text-5xl font-serif font-light leading-tight mb-6">
+              Виктория <span className="italic">Бузаева</span>
+            </h1>
+
+            <div className="space-y-5 text-text-secondary leading-relaxed font-sans font-light">
+              <p className="text-text-primary">
+                Психолог в психодинамическом подходе. Работаю с женщинами, которым знакома жизнь в напряжении: когда в отношениях
+                много "надо", контроля или спасательства, и мало опоры на себя.
+              </p>
+              <p>
+                Если вы часто "держитесь", терпите, берете на себя чужое, в терапии можно постепенно возвращать границы,
+                право на свои чувства и более устойчивое "я".
+              </p>
+            </div>
+
+            <div className="mt-8 grid sm:grid-cols-2 gap-3">
+              {quickFacts.map((f) => (
+                <div
+                  key={f.title}
+                  className="flex items-start gap-3 rounded-xl border border-white/10 bg-background/20 px-4 py-3"
+                >
+                  <div className="text-accent flex-shrink-0">{f.icon}</div>
+                  <div>
+                    <p className="text-text-primary font-medium text-sm">{f.title}</p>
+                    <p className="text-text-muted text-xs mt-0.5">{f.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <motion.button
+                onClick={scrollToBooking}
+                className="btn-primary w-full sm:w-auto"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Записаться на консультацию
+              </motion.button>
+            </div>
+          </motion.div>
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      >
-        <div className="w-6 h-10 border-2 border-text-muted/30 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-text-muted/50 rounded-full" />
-        </div>
-      </motion.div>
     </section>
   )
 }

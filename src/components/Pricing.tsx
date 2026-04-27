@@ -17,7 +17,6 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <p className="text-accent uppercase tracking-widest text-sm mb-4">[ стоимость ]</p>
           <h2 className="section-title">
             Инвестиция в себя
           </h2>
@@ -71,7 +70,7 @@ export default function Pricing() {
 
             {/* Planerka booking widget */}
             <div className="mt-8 pt-8 border-t border-white/10">
-              <p className="text-center text-text-muted text-sm mb-6">Выберите время, оплатите — ссылка на Zoom придёт автоматически</p>
+              <p className="text-center text-text-muted text-sm mb-6">Выберите время и оплатите. Ссылка на Zoom придет автоматически</p>
               <div
                 className="app-planerka-embed"
                 data-planerka-embed="default"
@@ -115,7 +114,7 @@ export default function Pricing() {
               Как записаться
             </h3>
             <p className="text-text-secondary text-sm">
-              Выберите время в виджете, оплатите онлайн — ссылка на Zoom создаётся автоматически, без ожидания.
+              Выберите время в виджете и оплатите онлайн. Ссылка на Zoom создается автоматически, без ожидания.
             </p>
           </div>
         </motion.div>
