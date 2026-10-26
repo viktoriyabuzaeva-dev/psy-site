@@ -38,7 +38,7 @@ export default function Hero() {
       ),
     },
     {
-      title: '1-2 раза в неделю',
+      title: '1 раз в неделю',
       description: 'Частоту подбираем индивидуально',
       icon: (
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -133,7 +133,7 @@ export default function Booking() {
                 <div className="mt-4 rounded-xl border border-white/10 bg-teal/10 px-4 py-3">
                   <p className="text-text-primary font-medium mb-1">Важно</p>
                   <p className="text-text-muted text-sm">
-                    Рекомендуемая частота: 1–2 раза в&nbsp;неделю (обсуждаем индивидуально).
+                    Рекомендуемая частота: 1&nbsp;раз в&nbsp;неделю (обсуждаем индивидуально).
                   </p>
                 </div>
               </div>
