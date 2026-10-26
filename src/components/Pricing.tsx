@@ -39,7 +39,7 @@ export default function Pricing() {
                   Консультация онлайн
                 </p>
                 <div className="flex items-baseline justify-center md:justify-start gap-2 mb-4">
-                  <span className="text-5xl md:text-6xl font-serif text-accent">2 500</span>
+                  <span className="text-5xl md:text-6xl font-serif text-accent">4 000</span>
                   <span className="text-text-secondary">₽</span>
                 </div>
                 <p className="text-text-secondary">

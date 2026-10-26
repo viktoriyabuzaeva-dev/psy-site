@@ -41,7 +41,7 @@ export default function SchemaMarkup() {
     },
     offers: {
       '@type': 'Offer',
-      price: '2500',
+      price: '4000',
       priceCurrency: 'RUB',
       availability: 'https://schema.org/InStock',
     },
@@ -103,7 +103,7 @@ export default function SchemaMarkup() {
         name: 'Сколько стоит консультация психолога?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Стоимость одной консультации: 2500 рублей за 55 минут. Выбираете время в виджете на сайте, оплачиваете онлайн. Ссылка на Zoom приходит автоматически.',
+          text: 'Стоимость одной консультации: 4000 рублей за 55 минут. Выбираете время в виджете на сайте, оплачиваете онлайн. Ссылка на Zoom приходит автоматически.',
         },
       },
       {

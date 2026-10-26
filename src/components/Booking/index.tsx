@@ -114,7 +114,7 @@ export default function Booking() {
               <div className="text-center">
                 <h3 className="text-2xl font-medium mb-3">Психологическая консультация</h3>
                 <p className="text-text-secondary mb-6">
-                  <span className="text-text-primary font-medium">2&nbsp;500&nbsp;₽</span> · 55 минут · Zoom
+                  <span className="text-text-primary font-medium">4&nbsp;000&nbsp;₽</span> · 55 минут · Zoom
                 </p>
               </div>
 

@@ -12,6 +12,10 @@ type EducationImage = {
 
 const images: EducationImage[] = [
   {
+    src: '/education/edu-08.jpg',
+    alt: 'Удостоверение о повышении квалификации: динамическое направление в психотерапии',
+  },
+  {
     src: '/education/edu-07.png',
     alt: 'Удостоверение (7)',
   },
@@ -91,6 +95,15 @@ export default function Education() {
                     <h3 className="font-medium text-text-primary mb-4">Образование</h3>
 
                     <div className="space-y-6">
+                      <div>
+                        <p className="text-text-primary font-medium leading-relaxed">
+                          Динамическое направление в психотерапии. Краткосрочная динамическая терапия
+                        </p>
+                        <p className="text-text-muted text-sm mt-1">
+                          Санкт-Петербургский институт дополнительного профессионального образования для психологов и психотерапевтов
+                        </p>
+                      </div>
+
                       <div>
                         <p className="text-text-primary font-medium leading-relaxed">
                           Личностно-ориентированная (реконструктивная) психотерапия по Карвасарскому, Ташлыкову, Исуриной
